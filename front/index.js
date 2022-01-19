@@ -1,4 +1,3 @@
-
 const imageForm = document.querySelector("#imageForm")
 const imageInput = document.querySelector("#imageInput")
 
@@ -7,7 +6,7 @@ imageForm.addEventListener("submit", async event => {
   const file = imageInput.files[0]
 
   // get secure url from our server
-  const { url } = await fetch("/s3Url").then(res => res.json())
+  const { url } = await fetch("http://localhost:8080/s3Url").then(res => res.json()).catch((err) => console.log(err))
   console.log(url)
 
   // post the image direclty to the s3 bucket
@@ -29,3 +28,4 @@ imageForm.addEventListener("submit", async event => {
   img.src = imageUrl
   document.body.appendChild(img)
 })
+
