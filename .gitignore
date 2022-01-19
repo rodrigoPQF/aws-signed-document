@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /back/node_modules
 /front/node_modules
 /back/.env
+=======
+node_modules
+
+package-lock.json
+>>>>>>> e17bf3a4570a01832838c97d7e4e6735ba324862
